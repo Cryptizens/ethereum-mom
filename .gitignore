@@ -12,4 +12,5 @@ yarn-error.log
 *.sln
 
 # Cloudflare config
-.cloudflare
+.cloudflare-api
+.cloudflare-email

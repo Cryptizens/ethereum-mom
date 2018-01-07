@@ -18,5 +18,15 @@ export const snippets = [
       "}"
     ],
     advice: 'use the <span class="code-token">private</span> modifier, and a starting underscore <span class="code-token">_</span> as a convention to emphasize the private nature of your function'
+  },
+  {
+    title: "How to listen to a contract event in Javascript",
+    updated_at: "Jan 06, 2018",
+    code: [
+      "function _addToArray(uint _number) private {",
+      "  numbers.push(_number);",
+      "}"
+    ],
+    advice: 'use the <span class="code-token">private</span> modifier, and a starting underscore <span class="code-token">_</span> as a convention to emphasize the private nature of your function'
   }
 ]
