@@ -1,7 +1,18 @@
 <template lang="html">
   <div>
-    <h1>&nbsp;👩&nbsp;Ethereum Mom</h1>
-    <p>Let mummy help you ease your Solidity and Javascript pains with these curated code snippets</p>
+    <h1>
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="75px" viewBox="0 0 256 417" version="1.1" preserveAspectRatio="xMidYMid">
+    	<g>
+    		<polygon fill="#343434" points="127.9611 0 125.1661 9.5 125.1661 285.168 127.9611 287.958 255.9231 212.32"/>
+    		<polygon fill="#8C8C8C" points="127.962 0 0 212.32 127.962 287.959 127.962 154.158"/>
+    		<polygon fill="#3C3C3B" points="127.9611 312.1866 126.3861 314.1066 126.3861 412.3056 127.9611 416.9066 255.9991 236.5866"/>
+    		<polygon fill="#8C8C8C" points="127.962 416.9052 127.962 312.1852 0 236.5852"/>
+    		<polygon fill="#141414" points="127.9611 287.9577 255.9211 212.3207 127.9611 154.1587"/>
+    		<polygon fill="#393939" points="0.0009 212.3208 127.9609 287.9578 127.9609 154.1588"/>
+    	</g>
+    </svg>
+    &nbsp;👩</h1>
+    <p>Let <b>Ethereum Mom</b> ease your <b>Solidity</b> and <b>JavaScript</b> pains with her carefully crafted code snippets</p>
   </div>
 </template>
 
@@ -12,11 +23,16 @@ export default {
 
 <style lang="scss" scoped>
 h1 {
-  font-size: 3rem;
+  font-size: 5rem;
+  color: darken($gray-900, 5%);
+  margin-bottom: 10px;
+}
+p {
+  font-size: 2em;
 }
 div {
   text-align: center;
-  margin-top: 80px;
+  margin-top: 30px;
   margin-bottom: 80px;
 }
 </style>

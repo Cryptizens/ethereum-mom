@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <app-nav></app-nav>
-    <div class="container">
+    <div class="container wrapper">
       <router-view></router-view>
     </div>
     <app-footer></app-footer>
@@ -24,7 +24,7 @@ export default {
 
 <style lang="scss">
 body {
-  background-color: #FAFAFA;
+  background: $broken-hearts-gradient;
   margin: 0;
   display: block;
   color: $gray-900;
@@ -48,6 +48,10 @@ h5 {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.wrapper {
+  min-height: calc(100vh - #{ 2 * $nav-height } - #{ 2 * $footer-height });
 }
 
 .container {

@@ -9,3 +9,11 @@ $gray-300: #eef0f1;
 $gray-200: #f3f4f4;
 $gray-100: #fafafa;
 $base-font: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+
+$sunny-gradient: linear-gradient(20deg,rgb(219,112,147),#daa357);
+$sand-to-blue-gradient: linear-gradient(to right, #3e5151, #decba4);
+$broken-hearts-gradient: linear-gradient(45deg, darken(#d9a7c7, 10%), darken(#fffcdc, 5%));
+$foreground-color: $gray-100;
+
+$nav-height: 50px;
+$footer-height: 30px;

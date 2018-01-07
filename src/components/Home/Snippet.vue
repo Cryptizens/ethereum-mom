@@ -33,12 +33,13 @@ export default {
 
 <style lang="scss" scoped>
 div {
-  background-color: #fff;
+  background-color: $foreground-color;
   border-radius: 6px;
   padding: 40px;
   margin: 40px 0;
   border: 1px solid $gray-200;
   transition: box-shadow .25s;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.17);
 
   @media (max-width: 1000px){
     margin: 20px 0 !important;

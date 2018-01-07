@@ -10,7 +10,7 @@
           </div>
         </a>
         <div id="menu">
-          <router-link to="/about">About</router-link>
+          <router-link class="link" to="/about">About</router-link>
           <a class="link" href="/">Faucet</a>
           <a class="link hide-mobile" href="https://github.com/thomasvds/ethereum-mom" target="_blank" rel="noopener">Contribute</a>
         </div>
@@ -26,8 +26,9 @@ export default {
 
 <style lang="scss" scoped>
 nav {
-  background-color: #fff;
+  background-color: $foreground-color;
   border-bottom: 1px solid $gray-200;
+  height: $nav-height;
 
   .link {
     padding: 0 8px;
