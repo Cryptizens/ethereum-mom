@@ -2,8 +2,7 @@
   <div id="app">
     <app-nav></app-nav>
     <div class="container">
-      <app-title></app-title>
-      <app-snippet></app-snippet>
+      <app-home></app-home>
     </div>
     <!-- <app-footer></app-footer> -->
   </div>
@@ -11,16 +10,14 @@
 
 <script>
 import Nav from './components/Shared/Nav.vue';
-import Title from './components/Home/Title.vue';
-import Snippet from './components/Home/Snippet.vue';
+import Home from './components/Home.vue';
 import Footer from './components/Shared/Footer.vue';
 
 export default {
   name: 'app',
   components: {
     'app-nav': Nav,
-    'app-title': Title,
-    'app-snippet': Snippet,
+    'app-home': Home,
     'app-footer': Footer
   }
 }
@@ -47,6 +44,11 @@ h5 {
   font-size: 14px;
   color: $gray-700;
   font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .container {

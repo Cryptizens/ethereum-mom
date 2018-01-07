@@ -23,6 +23,7 @@ npm run build
 # UPLOAD ALL BUILT SITE FILES TO S3
 aws s3 cp dist/ s3://$aws_target_bucket/dist --recursive --profile $aws_profile --acl public-read
 aws s3 cp index.html s3://$aws_target_bucket/index.html --profile $aws_profile --acl public-read
+aws s3 cp src/data/snippets.json s3://$aws_target_bucket/snippets.json --profile $aws_profile --acl public-read
 
 # PURGE EVERYTHING ON CLOUDFLARE CDN TO RELOAD NEW FILES VERSIONS
 curl -X DELETE "https://api.cloudflare.com/client/v4/zones/$cloudflare_resource_id/purge_cache" \

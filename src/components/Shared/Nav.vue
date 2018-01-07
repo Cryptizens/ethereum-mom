@@ -11,7 +11,8 @@
           </div>
         </a>
         <div id="menu">
-          <a class="link" href="/all">Use Cases</a>
+          <a class="link" href="/">Use Cases</a>
+          <a class="link" href="/">Faucet</a>
           <a class="link hide-mobile" id="contribute" href="/" target="_blank" rel="noopener">Contribute</a>
         </div>
       </div>
@@ -32,11 +33,6 @@ nav {
   .link {
     padding: 0 8px;
     color: $gray-800;
-  }
-
-  a {
-    text-decoration: none;
-    color: inherit;
   }
 }
 .nav-spacer, nav {

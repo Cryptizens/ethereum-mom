@@ -1,33 +1,38 @@
 <template lang="html">
   <div>
-    <div v-for="snippet in snippets">
-      <div class="card">
-        <a href="/">
-          <h3>{{ snippet.title }}</h3>
-        </a>
-        <h5>Last updated {{ snippet.updated_at }}</h5>
-        <pre>
-          <code class="sol">{{ snippet.code.join('\n') }}</code>
-        </pre>
-        <p><span style="font-size: 30px">💁</span><b>&nbsp;Mummy says: </b><span v-html="snippet.advice"></span></p>
-      </div>
-    </div>
+    <a v-bind:href="snippetLink">
+      <h3>{{ snippet.title }}</h3>
+    </a>
+    <h5>Last updated {{ snippet.updated_at }}</h5>
+    <pre>
+      <code class="sol">{{ rawCode }}</code>
+    </pre>
+    <p>
+      <span class="advice-emoji">💁</span>
+      <span class="advice-title">Mummy says: </span>
+      <span v-html="snippet.advice"></span>
+    </p>
   </div>
 </template>
 
 <script>
-import { snippets } from './snippets'
 export default {
-  data() {
-    return {
-      snippets: snippets
+  props: [
+    'snippet'
+  ],
+  computed: {
+    snippetLink() {
+      return '#'
+    },
+    rawCode() {
+      return this.snippet.code.join('\n')
     }
   }
 }
 </script>
 
-<style lang="scss">
-.card {
+<style lang="scss" scoped>
+div {
   background-color: #fff;
   border-radius: 6px;
   padding: 40px;
@@ -39,24 +44,20 @@ export default {
     margin: 20px 0 !important;
     padding: 20px !important;
   }
+}
 
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-  h3, h5 {
-    margin-top: 0;
-    margin-left: 0;
-    margin-right: 0;
-  }
+h3, h5 {
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
 
-  h3 {
-    margin-bottom: 15px;
-  }
+h3 {
+  margin-bottom: 15px;
+}
 
-  h5 {
-    margin-bottom: 20px;
-  }
+h5 {
+  margin-bottom: 20px;
 }
 
 pre {
@@ -67,27 +68,25 @@ pre {
   letter-spacing: 0;
   white-space: pre-wrap;
   word-break: keep-all;
-
-  code {
-    background: #272822 !important;
-    margin-bottom: -25px;
-    padding-right: 2em !important;
-    padding-left: 2em !important;
-  }
 }
 
-.output {
-  background-color: #EEF0F1;
-  padding: 15px;
-  border-radius: .3em;
-  font-size: 14px;
-  line-height: 20px;
-  font-family: Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;
-  color: var(--gray-800);
-  margin-bottom: 0;
+code {
+  background: #272822 !important;
+  margin-bottom: -25px;
+  padding-right: 2em !important;
+  padding-left: 2em !important;
 }
 
 .code-token {
   font-family: 'Andale Mono';
+}
+
+.advice-emoji {
+  font-size: 30px;
+}
+
+.advice-title {
+  font-weight: bold;
+  margin-left: 5px;
 }
 </style>
