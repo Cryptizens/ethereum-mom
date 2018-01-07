@@ -1,6 +1,7 @@
 export const snippets = [
   {
     title: "How to mark a function as private in Solidity",
+    author: "thomasvds",
     updated_at: "Jan 05, 2018",
     code: [
       "function _addToArray(uint _number) private",
@@ -10,7 +11,8 @@ export const snippets = [
     advice: "use the <span class=\"code-token\">private</span> modifier, and a starting underscore <span class=\"code-token\">_</span> as a convention to emphasize the private nature of your function"
   },
   {
-    title: "How to mark a function as private in Solidity",
+    title: "How to listen to a contract event in JavaScript",
+    author: "thomasvds",
     updated_at: "Jan 05, 2018",
     code: [
       "function _addToArray(uint _number) private",

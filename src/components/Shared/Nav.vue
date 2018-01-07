@@ -7,13 +7,12 @@
             👩
             &nbsp;
             <div>Ethereum Mom</div>
-
           </div>
         </a>
         <div id="menu">
-          <a class="link" href="/">Use Cases</a>
+          <router-link to="/about">About</router-link>
           <a class="link" href="/">Faucet</a>
-          <a class="link hide-mobile" id="contribute" href="/" target="_blank" rel="noopener">Contribute</a>
+          <a class="link hide-mobile" href="https://github.com/thomasvds/ethereum-mom" target="_blank" rel="noopener">Contribute</a>
         </div>
       </div>
     </div>

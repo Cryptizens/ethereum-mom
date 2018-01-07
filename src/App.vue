@@ -2,9 +2,9 @@
   <div id="app">
     <app-nav></app-nav>
     <div class="container">
-      <app-home></app-home>
+      <router-view></router-view>
     </div>
-    <!-- <app-footer></app-footer> -->
+    <app-footer></app-footer>
   </div>
 </template>
 
@@ -17,7 +17,6 @@ export default {
   name: 'app',
   components: {
     'app-nav': Nav,
-    'app-home': Home,
     'app-footer': Footer
   }
 }

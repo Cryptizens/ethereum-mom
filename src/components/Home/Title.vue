@@ -1,7 +1,7 @@
 <template lang="html">
   <div>
     <h1>&nbsp;👩&nbsp;Ethereum Mom</h1>
-    <p>Let mummy help you ease your Solidity, Web3.js and Truffle pains with these curated code snippets</p>
+    <p>Let mummy help you ease your Solidity and Javascript pains with these curated code snippets</p>
   </div>
 </template>
 
@@ -16,5 +16,7 @@ h1 {
 }
 div {
   text-align: center;
+  margin-top: 80px;
+  margin-bottom: 80px;
 }
 </style>

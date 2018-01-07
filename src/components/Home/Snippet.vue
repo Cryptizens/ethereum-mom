@@ -3,7 +3,7 @@
     <a v-bind:href="snippetLink">
       <h3>{{ snippet.title }}</h3>
     </a>
-    <h5>Last updated {{ snippet.updated_at }}</h5>
+    <h5>Last updated {{ snippet.updated_at }}, submitted by <a v-bind:href="'https://github.com/' + snippet.author">{{ snippet.author}}</a></h5>
     <pre>
       <code class="sol">{{ rawCode }}</code>
     </pre>

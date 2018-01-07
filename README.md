@@ -1,18 +1,11 @@
 # ethereum-mom
 
-> A Vue.js project
+> Ethereum Mom aims at making Ethereum Smart Contracts development fun and easy. Enjoy a relaxed approach, with answers that you'd only dare to get from your Mom because you think you should know them.
 
-## Build Setup
+## Contributing
 
-``` bash
-# install dependencies
-npm install
+Contributing with your curated Solidity and JavaScript use cases is fairly simple. Check out the [snippets file in this repo](https://github.com/thomasvds/ethereum-mom/blob/master/src/data/snippets.js). After you've understood the (fairly simple) syntax and elements of new snippets, feel free to create a Pull Request so you contribution can be integrated and deployed.
 
-# serve with hot reload at localhost:8080
-npm run dev
+Don't forget to add your GitHub username in your snippet contribution, so it can be referenced accordingly.
 
-# build for production with minification
-npm run build
-```
-
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+Thanks and spread the Ethereum Love !
