@@ -8,28 +8,17 @@
 <script>
 import Title from './Home/Title.vue'
 import Snippet from './Home/Snippet.vue'
-import axios from 'axios'
-import hljs from '../vendor/hljs'
+import { snippets } from '../data/snippets'
 
 export default {
   data() {
     return {
-      snippets: []
+      snippets: snippets
     }
   },
   components: {
     'app-title': Title,
     'app-snippet': Snippet
-  },
-  created() {
-    axios.get(`https://s3.eu-central-1.amazonaws.com/ethereum.mom/snippets.json`)
-    .then(response => {
-      this.snippets = response.data
-      hljs.initHighlightingOnLoad()
-    })
-    .catch(e => {
-      console.log(e)
-    })
   }
 }
 </script>
