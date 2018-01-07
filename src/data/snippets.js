@@ -88,14 +88,12 @@ export const snippets = [
     updated_at: "Jan 05, 2018",
     language: "solidity",
     code: [
-      "event NewMemory(string myMessage);",
+      "event MyEvent(string myMessage);",
       "",
       "function myFunction(string _message) public {",
-      "  NewEvent(_message);",
+      "  MyEvent(_message);",
       "}"
     ],
     advice: "listening to your contract events will let you know when certain transactions have actually occured, giving you a feedback after you've called one of your contract functions."
   }
-
-
 ]
