@@ -12,7 +12,7 @@
     	</g>
     </svg>
     &nbsp;👩</h1>
-    <p>Let <b>Ethereum Mom</b> ease your <b>Solidity</b> and <b>JavaScript</b> pains with her carefully crafted code snippets</p>
+    <p>Let <b>Ethereum Mom</b> ease your <b>Solidity</b> and <b>JavaScript</b> pains with her 100+ carefully crafted code snippets</p>
   </div>
 </template>
 
