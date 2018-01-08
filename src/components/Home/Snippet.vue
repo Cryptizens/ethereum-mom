@@ -4,9 +4,7 @@
       <h3>{{ snippet.title }}</h3>
     </a>
     <h5>Last updated {{ snippet.updated_at }}, submitted by <a v-bind:href="'https://github.com/' + snippet.author">{{ snippet.author}}</a></h5>
-    <pre>
-      <code class="sol">{{ rawCode }}</code>
-    </pre>
+    <pre class="language-js"><code>{{ rawCode }}</code></pre>
     <p>
       <span class="advice-emoji">💁</span>
       <span class="advice-title">Mummy says: </span>
@@ -62,7 +60,7 @@ h5 {
 }
 
 pre {
-  background: #272822;
+  // background: #272822;
   overflow: auto;
   border-radius: .3em;
   font-size: 18px;
@@ -70,13 +68,13 @@ pre {
   white-space: pre-wrap;
   word-break: keep-all;
 }
-
-code {
-  background: #272822 !important;
-  margin-bottom: -25px;
-  padding-right: 2em !important;
-  padding-left: 2em !important;
-}
+//
+// code {
+//   background: #272822 !important;
+//   margin-bottom: -25px;
+//   padding-right: 2em !important;
+//   padding-left: 2em !important;
+// }
 
 .code-token {
   font-family: 'Andale Mono';

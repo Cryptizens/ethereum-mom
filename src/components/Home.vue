@@ -1,16 +1,15 @@
 <template lang="html">
   <div>
     <app-title></app-title>
-
     <ais-index
       app-id="BK3XWRO8GC"
       api-key="55c2903e3440cf48741911e84108312d"
       index-name="ethereum-snippets"
     >
       <span class="algolia-autocomplete" style="position: relative; display: inline-block; direction: ltr;">
-        <ais-input placeholder="How to avoid being stuck while developing Smart Contracts..."></ais-input>
+        <ais-input placeholder="Ask me anything, sonny"></ais-input>
       </span>
-      <ais-results>
+      <ais-results v-highlightjs>
         <template slot-scope="{ result }">
           <app-snippet :snippet="result"></app-snippet>
         </template>
@@ -32,12 +31,25 @@ export default {
 </script>
 
 <style>
+@media (max-width: 1000px){
+  .algolia-autocomplete{
+    width:100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .ais-input{
+    font-size:16px !important;
+  }
+}
+
 .algolia-autocomplete{
     width:70%;
     margin-left: 15%;
     margin-right: 15%;
     border:0;
     box-shadow: 0 2px 20px rgba(0,0,0,0.17);
+    margin-bottom: 30px;
 }
 .algolia-autocomplete .ais-input{
     border-radius:3px;

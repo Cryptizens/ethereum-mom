@@ -17,6 +17,13 @@ cloudflare_api_file=".cloudflare-api"
 cloudflare_email=$(cat "$cloudflare_email_file")
 cloudflare_api_key=$(cat "$cloudflare_api_file")
 
+# ALGOLIA SETTINGS
+algolia_api_file=".algolia"
+algolia_api_key=$(cat "$algolia_api_file")
+algolia_application_id="BK3XWRO8GC"
+algolia_index_name="ethereum-snippets"
+algolia_data_file="snippets.json"
+
 # BUILD ALL FILES
 npm run build
 
@@ -30,6 +37,19 @@ curl -X DELETE "https://api.cloudflare.com/client/v4/zones/$cloudflare_resource_
      -H "X-Auth-Key: $cloudflare_api_key" \
      -H "Content-Type: application/json" \
      --data '{"purge_everything":true}' | json_pp
+
+# PURGE EVERYTHING FROM THE ALGOLIA INDEX
+curl -X POST \
+     -H "X-Algolia-API-Key: ${algolia_api_key}" \
+     -H "X-Algolia-Application-Id: ${algolia_application_id}" \
+    "https://${algolia_application_id}.algolia.net/1/indexes/${algolia_index_name}/clear"
+
+# FILL UP THE ALGOLIA INDEX WITH THE UPDATED DATA
+curl -X POST \
+     -H "X-Algolia-API-Key: ${algolia_api_key}" \
+     -H "X-Algolia-Application-Id: ${algolia_application_id}" \
+     --data-binary @${algolia_data_file} \
+    "https://${algolia_application_id}.algolia.net/1/indexes/${algolia_index_name}/batch"
 
 # Command to get the zone id of the website to purge
 # curl -X GET "https://api.cloudflare.com/client/v4/zones" \
