@@ -9,7 +9,7 @@
       <span class="algolia-autocomplete" style="position: relative; display: inline-block; direction: ltr;">
         <ais-input placeholder="Ask me anything, sonny"></ais-input>
       </span>
-      <ais-results v-highlightjs>
+      <ais-results>
         <template slot-scope="{ result }">
           <app-snippet :snippet="result"></app-snippet>
         </template>
