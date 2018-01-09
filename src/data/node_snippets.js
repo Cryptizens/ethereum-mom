@@ -1,4 +1,5 @@
-export const snippets = [
+module.exports = {
+  snippets : [
   {
     "title": "How to mark a function as private in Solidity",
     "slug": "how-to-mark-a-function-as-private-in-solidity",
@@ -125,3 +126,4 @@ export const snippets = [
     "advice": "<span class='code-token'>wei</span> are the smallest unit, and you should always make calculations in wei and convert only for display reasons."
   }
 ]
+}

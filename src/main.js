@@ -10,7 +10,6 @@ Vue.use(VuePrism);
 Vue.use(VueRouter);
 
 const router = new VueRouter({
-  mode: 'history',
   routes: Routes
 });
 

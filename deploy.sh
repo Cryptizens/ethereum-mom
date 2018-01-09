@@ -22,7 +22,6 @@ algolia_api_file=".algolia"
 algolia_api_key=$(cat "$algolia_api_file")
 algolia_application_id="BK3XWRO8GC"
 algolia_index_name="ethereum-snippets"
-algolia_data_file="snippets.json"
 
 # BUILD ALL FILES
 npm run build
@@ -44,11 +43,16 @@ curl -X POST \
      -H "X-Algolia-Application-Id: ${algolia_application_id}" \
     "https://${algolia_application_id}.algolia.net/1/indexes/${algolia_index_name}/clear"
 
+# CREATE THE BATCH REQUEST TO POST DATA TO ALGOLIA
+# Before using this, first ensure to have converted the data from ES6 to node
+# format, as node cannot read ES6 js (e.g., use module.exports instead of export)
+node src/data/convert_to_algolia.js
+
 # FILL UP THE ALGOLIA INDEX WITH THE UPDATED DATA
 curl -X POST \
      -H "X-Algolia-API-Key: ${algolia_api_key}" \
      -H "X-Algolia-Application-Id: ${algolia_application_id}" \
-     --data-binary @${algolia_data_file} \
+     --data-binary @algolia_batch_request.json \
     "https://${algolia_application_id}.algolia.net/1/indexes/${algolia_index_name}/batch"
 
 # Command to get the zone id of the website to purge
