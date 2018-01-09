@@ -1,14 +1,13 @@
 import Vue from 'vue'
-import VueRouter from 'vue-router';
+import VueRouter from 'vue-router'
 import App from './App.vue'
-import Routes from './routes';
-import InstantSearch from 'vue-instantsearch';
-import VuePrism from 'vue-prism';
-import 'prismjs/themes/prism.css'
+import Routes from './routes'
+import VuePrism from 'vue-prism'
+import 'prismjs/themes/prism-okaidia.css'
+import { store } from './store'
 
 Vue.use(VuePrism);
 Vue.use(VueRouter);
-Vue.use(InstantSearch);
 
 const router = new VueRouter({
   mode: 'history',
@@ -18,5 +17,6 @@ const router = new VueRouter({
 new Vue({
   el: '#app',
   router,
+  store,
   render: h => h(App)
 })

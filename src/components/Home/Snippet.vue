@@ -1,8 +1,8 @@
 <template lang="html">
   <div>
-    <a v-bind:href="snippetLink">
+    <router-link :to="{ name: 'snippet', params: { slug: snippet.slug }}">
       <h3>{{ snippet.title }}</h3>
-    </a>
+    </router-link>
     <h5>Last updated {{ snippet.updated_at }}, submitted by <a v-bind:href="'https://github.com/' + snippet.author">{{ snippet.author}}</a></h5>
     <pre class="language-js"><code>{{ rawCode }}</code></pre>
     <p>
@@ -19,9 +19,6 @@ export default {
     'snippet'
   ],
   computed: {
-    snippetLink() {
-      return '#'
-    },
     rawCode() {
       return this.snippet.code.join('\n')
     }
@@ -60,13 +57,15 @@ h5 {
 }
 
 pre {
-  // background: #272822;
+  background: #272822 !important;
   overflow: auto;
   border-radius: .3em;
   font-size: 18px;
   letter-spacing: 0;
   white-space: pre-wrap;
   word-break: keep-all;
+  border: none !important;
+  text-shadow: none !important;
 }
 //
 // code {

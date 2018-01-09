@@ -1,5 +1,6 @@
 import Home from './components/Home.vue';
 import About from './components/About.vue';
+import Snippet from './components/Snippet.vue';
 
 export default [
   {
@@ -9,5 +10,10 @@ export default [
   {
     path: '/about',
     component: About,
+  },
+  {
+    path: '/:slug',
+    name: 'snippet',
+    component: Snippet
   }
 ]

@@ -5,7 +5,7 @@
           © 2018 / Brought to you by <a target="_blank" href="https://cryptizens.io">Cryptizens.io</a> and inspired by <a target="_blank" href="https://codetogo.io">Codetogo.io</a>
         </div>
         <div>
-          <!-- <router-link to="/about">About</router-link> -->
+
         </div>
       </div>
     </div>
