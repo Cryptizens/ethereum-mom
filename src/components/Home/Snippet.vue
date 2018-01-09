@@ -57,7 +57,7 @@ h5 {
 }
 
 pre {
-  background: #272822 !important;
+  background: lighten(#272822,5%) !important;
   overflow: auto;
   border-radius: .3em;
   font-size: 18px;
@@ -67,13 +67,6 @@ pre {
   border: none !important;
   text-shadow: none !important;
 }
-//
-// code {
-//   background: #272822 !important;
-//   margin-bottom: -25px;
-//   padding-right: 2em !important;
-//   padding-left: 2em !important;
-// }
 
 .code-token {
   font-family: 'Andale Mono';
